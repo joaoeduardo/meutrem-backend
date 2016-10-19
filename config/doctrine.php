@@ -23,8 +23,11 @@ return [
     'managers'                   => [
         'default' => [
             'dev'           => env('APP_DEBUG'),
-            'meta'          => env('DOCTRINE_METADATA', 'annotations'),
+            'meta'          => 'fluent',
             'connection'    => env('DB_CONNECTION', 'mysql'),
+            'mappings'      => [
+                App\Mappings\TaskMapping::class
+            ],
             'namespaces'    => [
                 'App'
             ],
