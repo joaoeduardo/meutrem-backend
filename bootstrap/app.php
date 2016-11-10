@@ -67,6 +67,10 @@ $app->singleton(
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
+$app->routeMiddleware([
+    'jsonapi' => App\Http\Middleware\JsonApiMiddleware::class
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
