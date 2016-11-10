@@ -26,7 +26,10 @@ return [
             'meta'          => 'fluent',
             'connection'    => env('DB_CONNECTION', 'mysql'),
             'mappings'      => [
-                App\Mappings\TaskMapping::class
+                App\Mappings\CompanyMapping::class,
+                App\Mappings\LineMapping::class,
+                App\Mappings\OccurrenceMapping::class,
+                App\Mappings\StatusMapping::class
             ],
             'namespaces'    => [
                 'App'
