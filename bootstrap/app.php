@@ -82,6 +82,8 @@ $app->singleton(
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
+$app->register(App\Providers\RepositoryServiceProvider::class);
+
 $app->register(LaravelDoctrine\ORM\DoctrineServiceProvider::class);
 $app->register(Spatie\Fractal\FractalLumenServiceProvider::class);
 
