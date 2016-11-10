@@ -14,3 +14,21 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->group([
+    'namespace' => 'App\Http\Controllers',
+    'prefix' => 'api',
+    'middleware' => 'jsonapi'
+], function ($app) {
+    $app->get('/company', 'CompanyController@readAll');
+    $app->get('/company/{id}', 'CompanyController@read');
+
+    $app->get('/line', 'LineController@readAll');
+    $app->get('/line/{id}', 'LineController@read');
+
+    $app->get('/status', 'StatusController@readAll');
+    $app->get('/status/{id}', 'StatusController@read');
+
+    $app->get('/occurrence', 'OccurrenceController@readAll');
+    $app->get('/occurrence/{id}', 'OccurrenceController@read');
+});
