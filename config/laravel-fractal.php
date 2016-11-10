@@ -13,6 +13,6 @@ return [
     |
     */
 
-    'default_serializer' => '',
+    'default_serializer' => new League\Fractal\Serializer\JsonApiSerializer(env('APP_URL')),
 
 ];
