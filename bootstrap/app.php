@@ -89,6 +89,7 @@ $app->routeMiddleware([
 $app->register(App\Providers\DoctrineServiceProvider::class);
 $app->register(App\Providers\RepositoryServiceProvider::class);
 
+$app->register(Illuminate\Pagination\PaginationServiceProvider::class);
 $app->register(LaravelDoctrine\ORM\DoctrineServiceProvider::class);
 $app->register(Spatie\Fractal\FractalLumenServiceProvider::class);
 
