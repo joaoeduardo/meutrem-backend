@@ -16,7 +16,6 @@ $app->get('/', function () use ($app) {
 });
 
 $app->group([
-    'namespace' => 'App\Http\Controllers',
     'prefix' => 'api',
     'middleware' => 'jsonapi'
 ], function ($app) {
