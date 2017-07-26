@@ -68,7 +68,8 @@ $app->singleton(
 // ]);
 
 $app->routeMiddleware([
-    'jsonapi' => App\Http\Middleware\JsonApiMiddleware::class
+    'jsonapi' => App\Http\Middleware\JsonApiMiddleware::class,
+    'cors' => App\Http\Middleware\CorsMiddleware::class,
 ]);
 
 /*

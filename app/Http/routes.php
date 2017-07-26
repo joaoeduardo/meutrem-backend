@@ -17,7 +17,7 @@ $app->get('/', function () use ($app) {
 
 $app->group([
     'prefix' => 'api',
-    'middleware' => 'jsonapi'
+    'middleware' => ['cors','jsonapi']
 ], function ($app) {
     $app->get('/company', 'CompanyController@readAll');
     $app->get('/company/{id}', 'CompanyController@read');
